@@ -26,10 +26,10 @@
 				<section>
 					<h2>Summary</h2>
 					<p>Longitudinal analysis of Wikipedia's coverage of COVID-19 through 2020</p>
-					<p>Revision histories and activities reveal information production dynamics</p>
-					<p>Pageview data reveals information seeking and consumption dynamics</p>
+					<p>Revision histories and activities reveal information production and consumption dynamics</p>
 					<p>Content of articles can be used to reconstruct hyperlink networks and measure content similarity</p>
 					<p>(Old) <a href="https://arxiv.org/abs/2006.08899" target="_blank" rel="noopener noreferrer">pre-print on arXiv</a></p>
+					<p>A multi-level portrait of many quantitative findings: help me find threads!</p>
 				</section>
 
 				<section>
@@ -52,6 +52,115 @@
 					<p><b>Category-related articles</b>: Members of <a href="https://en.wikipedia.org/wiki/Category:SARS-CoV-2" target="_blank" rel="noopener noreferrer">Category:SARS-CoV-2</a> including <a href="https://en.wikipedia.org/wiki/Category:COVID-19" target="_blank" rel="noopener noreferrer">COVID-19</a></p>
 					<p><b>Neighbor-related articles</b>: Articles ever hyperlinked from the seed articles (e.g., Donald Trump)</p>
 					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Information production</h2>
+						<p>How did revision activity on articles vary over 2020?</p>
+						<p>Compare seed articles to both category-related and neighbor-related article sets as baselines</p>
+						<p>Number, time between, and size of revisions</p>
+					</section>
+
+					<section>
+						<h2>Information production</h2>
+						<p>Number of revisions for seed articles and average of neighbor and category-related articles</p>
+						<img src="./imgs/daily_revisions_mean_all.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information production</h2>
+						<p>Number of revisions for pandemic event seed article compared to sum of all daily revisions for neughbor and category-related articles</p>
+						<img src="./imgs/daily_revisions_sum_all.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information production</h2>
+						<p>Time between revisions for seed articles</p>
+						<img src="./imgs/daily_lag_seed.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information production</h2>
+						<p>Median size of a contribution (bytes) over time</p>
+						<img src="./imgs/daily_diff_all.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information production</h2>
+						<p>In most acute momemnts of pandemic in February-April 2020, hundreds of daily revisions imposes significant coordination costs</p>
+						<p>Revision activity on single pandemic event article overtook revision activity across hundreds of other articles</p>
+						<p>Slowing pace of revisions after May increases time between edits and enables more traditional forms of contribution and deliberation</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Information consumption</h2>
+						<p>Pageview data captures aggregate information seeking behaviors, likely strongly influenced by external events!</p>
+						<img src="./imgs/daily_pageviews_seed.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information consumption</h2>
+						<p>Pageview activity for COVID small compared to category and neighbor-related information</p>
+						<img src="./imgs/daily_pageviews_all.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information consumption</h2>
+						<p>Event > Disease > Virus</p>
+						<p>Pageviews to these articles significantly greater than average attention to category and neighbor-related articles</p>
+						<p>Category-related articles about political figures and elections swamp information consumption about pandemic/disease/virus, especially near major events</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Editing patterns</h2>
+						<p>How have user-level editing patterns changed over time?</p>
+						<p>We can measure intensity of revision activity and identify patterns of user re-engagement</p>
+					</section>
+
+					<section>
+						<h2>Editing patterns</h2>
+						<p>Time since last edit</p>
+						<img src="./imgs/daily_user_lag_all.png" height="400">
+					</section>
+
+					<section>
+						<h2>Editing patterns</h2>
+						<p>Time since last edit</p>
+						<img src="./imgs/editing_intensity.png" height="400">
+					</section>
+
+					<section>
+						<h2>Editing patterns</h2>
+						<p>Revisions by time of day</p>
+						<img src="./imgs/editing_time_of_day.png" height="400">
+					</section>
+
+					<section>
+						<h2>Editing patterns</h2>
+						<p>Users active at t-n active at t</p>
+						<img src="./imgs/daily_user_reengagement.png" height="400">
+					</section>
+
+					<section>
+						<h2>Editing patterns</h2>
+						<p>Editors active at t-n on seed i active at t on seed j</p>
+						<img src="./imgs/daily_user_reengagement_seeds.png" height="300">
+					</section>
+
+					<section>
+						<h2>Editing patterns</h2>
+						<p>Time between user revisions has slowed</p>
+						<p>Strong bimodal pattern across time capturing within and between edit session behaviors</p>
+						<p>Strong diurnal cycle in editing patterns suggestive of over-representation of editors from particular geographies or work patterns</p>
+						<p>High and consistent levels of user re-engagement over time plays</p>
+						<p>Tracking editor movement between articles as a prerequisite for coordination</p>
+					</section>
 				</section>
 
 				<section>
@@ -85,7 +194,66 @@
 						<h2>Editor turnover</h2>
 						<p>Profoundly high levels of turnover: most new editors are gone within a week</p>
 						<p>Durability of 2019 cohort: these editors motivated to remain active contributors over long durations</p>
+						<p>Turnover + durability replicates previous findings from U.S. election and candidate articles</p>
 						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: What are 2019 editors doing that dissuades subsequent editors from remaining?</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Collaboration network</h2>
+						<p>Bipartite network of editors connected to articles</p>
+						<p>Measure the number of editors and articles being revised daily</p>
+						<p>How has the connectivity of the collaboration network changed over time?</p>
+					</section>
+
+					<section>
+						<h2>Collaboration network</h2>
+						<p>Bipartite degree and weight distributions</p>
+						<img src="./imgs/cuml_collab_g_distributions.png" height="250">
+					</section>
+
+					<section>
+						<h2>Collaboration network</h2>
+						<p>Number of daily articles, editors, and revisions</p>
+						<img src="./imgs/g_snapshot_counts.png" height="400">
+					</section>
+
+					<section>
+						<h2>Collaboration network</h2>
+						<p>Average clustering coefficient around editors & articles; fraction in largest component</p>
+						<img src="./imgs/g_snapshot_clustering_lcc.png" height="400">
+					</section>
+
+					<section>
+						<h2>Collaboration network</h2>
+						<p>Collaboration activity tracks LCC fraction, peaking during start of shutdowns in March, declines to a stable baseline by June</p>
+						<p>Article clustering increases as many articles share more editors in common</p>
+						<p>Editor clustering decreases as fewer editors share articles in common</p>
+						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: How can editor clustering decline while article clustering increases?</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Hyperlink network</h2>
+						<p>Directed network of articles linking to articles</p>
+						<p>Sampled weekly and hyperlinks parsed from body of articles</p>
+						<p>How has the connectivity of articles changed over time?</p>
+					</section>
+
+					<section>
+						<h2>Hyperlink network</h2>
+						<p>Seed articles compared to average across all articles</p>
+						<img src="./imgs/hyperlink_weekly_seed_changes.png" height="400">
+					</section>
+
+					<section>
+						<h2>Hyperlink network</h2>
+						<p>Seed articles are (unsurprisingly) extremely "important" within the hyperlink network from March onward</p>
+						<p>Reciprocity similar to rest of network</p>
+						<p>Clustering and neighbor in-degree decrease sharply after March as hyperlink network grows with more poorly-connected articles</p>
+						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: Hyperlink networks stable by June → what is being so actively edited afterwards?</p>
 					</section>
 				</section>
 
@@ -102,15 +270,21 @@
 
 					<section>
 						<h2>Content evolution</h2>
+						<p>Article size as a coarse measure of content</p>
+						<img src="./imgs/daily_size_all.png" height="400">
+					</section>
+
+					<section>
+						<h2>Content evolution</h2>
 						<p>Three seed articles, four metrics, Jan.–Dec. 2020</p>
 						<img src="./imgs/weekly_seed_content_changes.png">
 					</section>
 
 					<section>
 						<h2>Content evolution</h2>
+						<p>Rapid growth in size of articles surpassing mean article size in sample within weeks</p>
 						<p>Virus > Disease > Event similarity</p>
-						<p>Text & external similarity >0.8 by April</p>
-						<p>Image & hyperlink similarity >0.8 after November</p>
+						<p>Text & external similarity by April vs. Image & hyperlink similarity after November</p>
 						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: Revision activity vs. content stability → what is being so actively edited?</p>
 					</section>
 				</section>
@@ -126,6 +300,13 @@
 
 					<section>
 						<h2>Future work</h2>
+					</section>
+
+					<section>
+						<h2>Additional plugs</h2>
+						<p>I will be teaching "INFO 4613/5613: Network Science" in Fall 2021</p>
+						<p>Focus on applying network science constructs to real-word social, information, and infrastructural networks</p>
+						<p>Currently over-subscribed, but remote-synchronous class will allow us to scale enrollments</p>
 					</section>
 
 				</section>
