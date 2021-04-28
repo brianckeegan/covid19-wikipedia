@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/serif.min.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
@@ -36,22 +36,55 @@
 					<h2>Background</h2>
 					<p>Wikipedia's information production and consumption about current events is a rich empirical setting</p>
 					<p>The disruptions caused by the COVID-19 pandemic are encoded in Wikipedia article behavior</p>
-					<p></p>
+					<p>Wikipedia articles about COVID-19 pandemic requires different forms of collaboration and coordination than most articles about current events</p>
 				</section>
 
 				<section>
-					<h2>Methods</h2>
-					<p>Wikipedia's APIs expose historical data about article revision activity, content, and pageviews</p>
-					<p><a href="https://github.com/brianckeegan/wikifunctions" target="_blank" rel="noopener noreferrer">Custom Python scripts</a> to retrieve and analyze data</p>
+					<section>
+						<h2>Methods</h2>
+						<p>Wikipedia's APIs expose historical data about article revision activity, content, and pageviews</p>
+						<p><a href="https://github.com/brianckeegan/wikifunctions" target="_blank" rel="noopener noreferrer">Custom Python scripts</a> to retrieve and analyze data</p>
+					</section>
 
-				</section>
+					<section>
+						<h2>Sampling</h2>
+						<p>Start with high-relevance "seed articles" about <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="_blank" rel="noopener noreferrer">pandemic event</a>, <a href="https://en.wikipedia.org/wiki/COVID-19" target="_blank" rel="noopener noreferrer">disease</a>, and <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2" target="_blank" rel="noopener noreferrer">virus</a></p>
+						<p><b>Category-related articles</b>: Members of <a href="https://en.wikipedia.org/wiki/Category:SARS-CoV-2" target="_blank" rel="noopener noreferrer">Category:SARS-CoV-2</a> including <a href="https://en.wikipedia.org/wiki/Category:COVID-19" target="_blank" rel="noopener noreferrer">COVID-19</a></p>
+						<p><b>Neighbor-related articles</b>: Articles ever hyperlinked from the seed articles (e.g., Donald Trump)</p>
+						<p>Retrieve revision history and pageview data for articles from December 2018 through December 2020</p>
+					</section>
 
-				<section>
-					<h2>Data</h2>
-					<p>Start with high-relevance "seed articles" about <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="_blank" rel="noopener noreferrer">pandemic event</a>, <a href="https://en.wikipedia.org/wiki/COVID-19" target="_blank" rel="noopener noreferrer">disease</a>, and <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2" target="_blank" rel="noopener noreferrer">virus</a></p>
-					<p><b>Category-related articles</b>: Members of <a href="https://en.wikipedia.org/wiki/Category:SARS-CoV-2" target="_blank" rel="noopener noreferrer">Category:SARS-CoV-2</a> including <a href="https://en.wikipedia.org/wiki/Category:COVID-19" target="_blank" rel="noopener noreferrer">COVID-19</a></p>
-					<p><b>Neighbor-related articles</b>: Articles ever hyperlinked from the seed articles (e.g., Donald Trump)</p>
-					</ul>
+					<section>
+						<h2>Data</h2>
+						<p>>2.3 million revisions to >10k articles for 2018–2020</p>
+						<p>Historical content of seed articles and neighbors retrieved weekly in 2020</p>
+						<table>
+							<tr>
+								<th>Page Type</th>
+								<th>Revisions</th>
+								<th>Articles</th>
+								<th>Editors</th>
+							</tr>
+							<tr>
+								<td><i>Both</i></td>
+								<td>122,800</td>
+								<td>70</td>
+								<td>15,569</td>
+							</tr>
+							<tr>
+								<td><i>Category</i></td>
+								<td>1,789,488</td>
+								<td>9,213</td>
+								<td>213,080</td>
+							</tr>
+							<tr>
+								<td><i>Neighbor</i></td>
+								<td>394,775</td>
+								<td>1,328</td>
+								<td>85,678</td>
+							</tr>
+						</table>
+					</section>
 				</section>
 
 				<section>
@@ -88,8 +121,14 @@
 
 					<section>
 						<h2>Information production</h2>
+						<p>Number of new articles and users by day</p>
+						<img src="./imgs/daily_article_user_creations.png" height="400">
+					</section>
+
+					<section>
+						<h2>Information production</h2>
 						<p>In most acute momemnts of pandemic in February-April 2020, hundreds of daily revisions imposes significant coordination costs</p>
-						<p>Revision activity on single pandemic event article overtook revision activity across hundreds of other articles</p>
+						<p>Revision activity on single pandemic event article overtook revision activity across other articles</p>
 						<p>Slowing pace of revisions after May increases time between edits and enables more traditional forms of contribution and deliberation</p>
 					</section>
 
@@ -97,21 +136,21 @@
 
 				<section>
 					<section>
-						<h2>Information consumption</h2>
-						<p>Pageview data captures aggregate information seeking behaviors, likely strongly influenced by external events!</p>
+						<h2>Info. consumption</h2>
+						<p>Pageview data captures information seeking behaviors—strongly influenced by external events!</p>
 						<img src="./imgs/daily_pageviews_seed.png" height="400">
 					</section>
 
 					<section>
-						<h2>Information consumption</h2>
+						<h2>Info. consumption</h2>
 						<p>Pageview activity for COVID small compared to category and neighbor-related information</p>
 						<img src="./imgs/daily_pageviews_all.png" height="400">
 					</section>
 
 					<section>
-						<h2>Information consumption</h2>
+						<h2>Info. consumption</h2>
 						<p>Event > Disease > Virus</p>
-						<p>Pageviews to these articles significantly greater than average attention to category and neighbor-related articles</p>
+						<p>Pageviews to seed articles much greater than average attention to category and neighbor-related articles</p>
 						<p>Category-related articles about political figures and elections swamp information consumption about pandemic/disease/virus, especially near major events</p>
 					</section>
 				</section>
@@ -119,7 +158,7 @@
 				<section>
 					<section>
 						<h2>Editing patterns</h2>
-						<p>How have user-level editing patterns changed over time?</p>
+						<p>How has user-level editing changed over time?</p>
 						<p>We can measure intensity of revision activity and identify patterns of user re-engagement</p>
 					</section>
 
@@ -143,13 +182,13 @@
 
 					<section>
 						<h2>Editing patterns</h2>
-						<p>Users active at t-n active at t</p>
+						<p>Users active at $t-n$ still active at $t$</p>
 						<img src="./imgs/daily_user_reengagement.png" height="400">
 					</section>
 
 					<section>
 						<h2>Editing patterns</h2>
-						<p>Editors active at t-n on seed i active at t on seed j</p>
+						<p>Editors active at $t-n$ on seed $i$ active at $t$ on seed $j$</p>
 						<img src="./imgs/daily_user_reengagement_seeds.png" height="300">
 					</section>
 
@@ -158,7 +197,7 @@
 						<p>Time between user revisions has slowed</p>
 						<p>Strong bimodal pattern across time capturing within and between edit session behaviors</p>
 						<p>Strong diurnal cycle in editing patterns suggestive of over-representation of editors from particular geographies or work patterns</p>
-						<p>High and consistent levels of user re-engagement over time plays</p>
+						<p>Consistent levels of user re-engagement over time</p>
 						<p>Tracking editor movement between articles as a prerequisite for coordination</p>
 					</section>
 				</section>
@@ -316,6 +355,7 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -323,8 +363,15 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: 'h/v',
+				// Math
+				math: {
+					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					// pass other options into `MathJax.Hub.Config()`
+					TeX: { Macros: { RR: "{\\bf R}" } }
+				},
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealHighlight ]
+				plugins: [ RevealHighlight, RevealMath ]
 			});
 		</script>
 	</body>
