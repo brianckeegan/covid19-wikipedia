@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>COVID-19 on Wikipedia</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>A Quantitative Portrait of Wikipedia's Collaborations during the COVID-19 Pandemic</h2>
+					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan</p>
+					<p style="color:#565A5C">28 April 2021</p>
+				</section>
+
+				<section>
+					<h2>Summary</h2>
+					<p>Longitudinal analysis of Wikipedia's coverage of COVID-19 through 2020</p>
+					<p>Revision histories and activities reveal information production dynamics</p>
+					<p>Pageview data reveals information seeking and consumption dynamics</p>
+					<p>Content of articles can be used to reconstruct hyperlink networks and measure content similarity</p>
+					<p>(Old) <a href="https://arxiv.org/abs/2006.08899" target="_blank" rel="noopener noreferrer">pre-print on arXiv</a></p>
+				</section>
+
+				<section>
+					<h2>Background</h2>
+					<p>Wikipedia's information production and consumption about current events is a rich empirical setting</p>
+					<p>The disruptions caused by the COVID-19 pandemic are encoded in Wikipedia article behavior</p>
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Methods</h2>
+					<p>Wikipedia's APIs expose historical data about article revision activity, content, and pageviews</p>
+					<p><a href="https://github.com/brianckeegan/wikifunctions" target="_blank" rel="noopener noreferrer">Custom Python scripts</a> to retrieve and analyze data</p>
+
+				</section>
+
+				<section>
+					<h2>Data</h2>
+					<p>Start with high-relevance "seed articles" about <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="_blank" rel="noopener noreferrer">pandemic event</a>, <a href="https://en.wikipedia.org/wiki/COVID-19" target="_blank" rel="noopener noreferrer">disease</a>, and <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2" target="_blank" rel="noopener noreferrer">virus</a></p>
+					<p><b>Category-related articles</b>: Members of <a href="https://en.wikipedia.org/wiki/Category:SARS-CoV-2" target="_blank" rel="noopener noreferrer">Category:SARS-CoV-2</a> including <a href="https://en.wikipedia.org/wiki/Category:COVID-19" target="_blank" rel="noopener noreferrer">COVID-19</a></p>
+					<p><b>Neighbor-related articles</b>: Articles ever hyperlinked from the seed articles (e.g., Donald Trump)</p>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Content evolution</h2>
+					<p>How has the content of </p>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+	</body>
+</html>
